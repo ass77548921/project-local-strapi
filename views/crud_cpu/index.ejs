@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Ram</title>
+    <title>cpu</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -18,10 +18,10 @@
         <div class="card-header">
           <ul class="nav nav-pills w-100">
             <li class="nav-pill active">
-              <a class="nav-link">Ram</a>
+              <a class="nav-link">cpu</a>
             </li>
             <li class="nav-pill ml-auto">
-              <a class="nav-link active" href="/crud_ram/add">Add Ram</a>
+              <a class="nav-link active" href="/crud_cpu/add">Add cpu</a>
             </li>
           </ul>
         </div>
@@ -32,10 +32,10 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Clock_rate</th>
-                <th scope="col">Size</th>
+                <th scope="col">Core</th>
+                <th scope="col">socket</th>
                 <th scope="col">Image_url</th>
-                <th scope="col">type</th>
+                <th scope="col">GHz</th>
                 <th width="200px">Action</th>
               </tr>
             </thead>
@@ -44,20 +44,20 @@
               <tr>
                 <th scope="row"><%= (i+1) %></th>
                 <td><%= data[i].name%></td>
-                <td><%= data[i].clock_rate%></td>
-                <td><%= data[i].size%></td>
+                <td><%= data[i].core%></td>
+                <td><%= data[i].socket_id%></td>
                 <td><%= data[i].image_url%></td>
-                <td><%= data[i].type%></td>
+                <td><%= data[i].GHz%></td>
                 <td>
                   <a
                     class="btn btn-success edit"
-                    href="/crud_ram/edit/<%=data[i].id%>"
+                    href="/crud_cpu/edit/<%=data[i].id%>"
                     >Edit</a
                   >
                   <a
                     class="btn btn-danger delete"
                     onclick="return alert('Are You sure?')"
-                    href="/crud_ram/delete/<%=data[i].id%>"
+                    href="/crud_cpu/delete/<%=data[i].id%>"
                     >Delete</a
                   >
                 </td>
@@ -69,7 +69,7 @@
 
           <!-- if result is empty -->
           <% if(!data.length) { %>
-          <p class="text-center">No Ram found!</p>
+          <p class="text-center">No cpu found!</p>
           <% } %>
         </div>
       </div>

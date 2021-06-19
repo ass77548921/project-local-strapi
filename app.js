@@ -12,7 +12,11 @@ var db = require('./lib/db');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require('./routes/books');
-var apiRouter = require('./routes/apiRam');
+var apiram = require('./routes/apiRam');
+var apicpu = require('./routes/apiCpu');
+//var apimotherboard = require('./routes/apiMotherboard');
+
+//var apicase = require('./routes/apiCase');
 
 var app = express();
 
@@ -29,7 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
-app.use('/crud_ram', apiRouter);
+app.use('/crud_ram', apiram);
+app.use('/crud_cpu', apicpu);
+//app.use('/crud_motherboard', apimotherboard);
+//app.use('/crud_case', apicase);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

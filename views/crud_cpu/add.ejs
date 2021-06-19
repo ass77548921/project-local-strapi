@@ -13,26 +13,26 @@
                 Add Book
             </div>
             <div class="card-body">
-                <form action="/crud_ram/add" method="post">
+                <form action="/crud_cpu/add" method="post">
                     <div class="form-group">
                         <label>Name:</label>
                         <input type="text" class="form-control" name="name" value="<%= name %>" autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label>Clock_rate:</label>
-                        <input type="text" class="form-control" name="clock_rate" value="<%= clock_rate %>" autocomplete="off">
+                        <label>core:</label>
+                        <input type="text" class="form-control" name="core" value="<%= core %>" autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label>Size:</label>
-                        <input type="text" class="form-control" name="size" value="<%= size %>" autocomplete="off">
+                        <label>socket:</label>
+                        <input type="text" class="form-control" name="socket_id" value="<%= socket_id %>" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label>Image_url:</label>
                         <input type="text" class="form-control" name="image_url" value="<%= image_url %>" autocomplete="off">
                     </div>
                     <div class="form-group" >
-                        <label>type:</label>
-                        <input type="text" class="form-control" name="type" value="<%= type %>" autocomplete="off">
+                        <label>GHz:</label>
+                        <input type="text" class="form-control" name="GHz" value="<%= GHz %>" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-info" value="Add"/>
